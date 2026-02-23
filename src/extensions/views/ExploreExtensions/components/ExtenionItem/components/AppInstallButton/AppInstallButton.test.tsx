@@ -23,6 +23,7 @@ jest.mock("@dashboard/config", () => ({
   __esModule: true,
   ...(jest.requireActual("@dashboard/config") as object),
   IS_CLOUD_INSTANCE: true,
+  ALLOW_SELF_HOSTED_EXTENSIONS_INSTALL: false,
 }));
 
 describe("Extensions / ExtensionItem / AppInstallButton", () => {
@@ -34,6 +35,7 @@ describe("Extensions / ExtensionItem / AppInstallButton", () => {
   it("should render disabled install button when has no permissions", () => {
     // Arrange
     ConfigMock.IS_CLOUD_INSTANCE = true;
+    ConfigMock.ALLOW_SELF_HOSTED_EXTENSIONS_INSTALL = false;
     (useHasManagedAppsPermission as jest.Mock).mockReturnValue({
       hasManagedAppsPermission: false,
     });
@@ -46,9 +48,10 @@ describe("Extensions / ExtensionItem / AppInstallButton", () => {
     expect(screen.getByRole("button")).toBeDisabled();
   });
 
-  it("should render disabled install button when no cloud instance", () => {
+  it("should render disabled install button when no cloud instance and override disabled", () => {
     // Arrange
     ConfigMock.IS_CLOUD_INSTANCE = false;
+    ConfigMock.ALLOW_SELF_HOSTED_EXTENSIONS_INSTALL = false;
     (useHasManagedAppsPermission as jest.Mock).mockReturnValue({ hasManagedAppsPermission: true });
 
     // Act
@@ -62,6 +65,21 @@ describe("Extensions / ExtensionItem / AppInstallButton", () => {
   it("should render install button when has permissions and cloud instance", () => {
     // Arrange
     ConfigMock.IS_CLOUD_INSTANCE = true;
+    ConfigMock.ALLOW_SELF_HOSTED_EXTENSIONS_INSTALL = false;
+    (useHasManagedAppsPermission as jest.Mock).mockReturnValue({ hasManagedAppsPermission: true });
+
+    // Act
+    render(<AppInstallButton manifestUrl="test-manifest" />);
+
+    // Assert
+    expect(screen.getByText("Install")).toBeVisible();
+    expect(screen.getByRole("button")).toBeEnabled();
+  });
+
+  it("should render install button when self-hosted override is enabled", () => {
+    // Arrange
+    ConfigMock.IS_CLOUD_INSTANCE = false;
+    ConfigMock.ALLOW_SELF_HOSTED_EXTENSIONS_INSTALL = true;
     (useHasManagedAppsPermission as jest.Mock).mockReturnValue({ hasManagedAppsPermission: true });
 
     // Act

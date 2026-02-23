@@ -21,6 +21,8 @@ export const getApiUrl = () => window.__SALEOR_CONFIG__.API_URL;
 export const getAbsoluteApiUrl = () => new URL(getApiUrl(), window.location.origin).href;
 export const SW_INTERVAL = parseInt(process.env.SW_INTERVAL ?? "300", 10);
 export const IS_CLOUD_INSTANCE = window.__SALEOR_CONFIG__.IS_CLOUD_INSTANCE === "true";
+export const ALLOW_SELF_HOSTED_EXTENSIONS_INSTALL =
+  window.__SALEOR_CONFIG__.ALLOW_SELF_HOSTED_EXTENSIONS_INSTALL === "true";
 
 export const getAppsConfig = () => ({
   marketplaceApiUri: window.__SALEOR_CONFIG__.APPS_MARKETPLACE_API_URL,

@@ -24,6 +24,7 @@ declare interface Window {
     EXTENSIONS_API_URL?: string;
     APPS_TUNNEL_URL_KEYWORDS?: string;
     IS_CLOUD_INSTANCE?: string;
+    ALLOW_SELF_HOSTED_EXTENSIONS_INSTALL?: string;
   };
 }
 

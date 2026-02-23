@@ -26,6 +26,7 @@ replace_env_var "APPS_MARKETPLACE_API_URL"
 replace_env_var "EXTENSIONS_API_URL"
 replace_env_var "APPS_TUNNEL_URL_KEYWORDS"
 replace_env_var "IS_CLOUD_INSTANCE"
+replace_env_var "ALLOW_SELF_HOSTED_EXTENSIONS_INSTALL"
 replace_env_var "LOCALE_CODE"
 
 echo "Environment variable replacement complete."

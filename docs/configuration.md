@@ -22,6 +22,8 @@ Create or edit `.env` file in a root directory or set environment variables with
 
 - `EXTENSIONS_API_URL` - URI of Marketplace API to fetch list of Extensions in JSON.
 
+- `ALLOW_SELF_HOSTED_EXTENSIONS_INSTALL` - Set to `true` to enable the Explore `Install` button even when `IS_CLOUD_INSTANCE` is `false`.
+
 - `APPS_TUNNEL_URL_KEYWORDS` - Custom apps tunnel URL keywords.
 
 ## Fetching schema

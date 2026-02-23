@@ -1,6 +1,6 @@
 import { ButtonWithTooltip } from "@dashboard/components/ButtonWithTooltip";
 import Link from "@dashboard/components/Link";
-import { IS_CLOUD_INSTANCE } from "@dashboard/config";
+import { ALLOW_SELF_HOSTED_EXTENSIONS_INSTALL, IS_CLOUD_INSTANCE } from "@dashboard/config";
 import { messages } from "@dashboard/extensions/messages";
 import { ExtensionsUrls } from "@dashboard/extensions/urls";
 import { useHasManagedAppsPermission } from "@dashboard/hooks/useHasManagedAppsPermission";
@@ -24,7 +24,7 @@ export const AppInstallButton = ({ manifestUrl }: { manifestUrl: string }) => {
     );
   }
 
-  if (IS_CLOUD_INSTANCE) {
+  if (IS_CLOUD_INSTANCE || ALLOW_SELF_HOSTED_EXTENSIONS_INSTALL) {
     return (
       <Link href={ExtensionsUrls.resolveInstallCustomExtensionUrl(manifestUrl)}>
         <Button variant="secondary" data-test-id="app-install-button">

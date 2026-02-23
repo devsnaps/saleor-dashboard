@@ -1,0 +1,180 @@
+{
+  "extensionCategories": [
+    {
+      "id": "payments",
+      "name": { "en": "Payments" },
+      "extensions": [
+        {
+          "id": "saleor.app.payment.stripe",
+          "type": "APP",
+          "kind": "OFFICIAL",
+          "name": { "en": "Stripe" },
+          "description": {
+            "en": "Accept card and wallet payments through Stripe."
+          },
+          "logo": {
+            "light": {
+              "source": "https://raw.githubusercontent.com/saleor/apps/main/apps/stripe/public/logo.png"
+            },
+            "dark": {
+              "source": "https://raw.githubusercontent.com/saleor/apps/main/apps/stripe/public/logo.png"
+            }
+          },
+          "manifestUrl": "http://localhost:3003/api/manifest",
+          "repositoryUrl": "https://github.com/saleor/apps/tree/main/apps/stripe"
+        }
+      ]
+    },
+    {
+      "id": "taxes",
+      "name": { "en": "Taxes" },
+      "extensions": [
+        {
+          "id": "saleor.app.avatax",
+          "type": "APP",
+          "kind": "OFFICIAL",
+          "name": { "en": "AvaTax" },
+          "description": {
+            "en": "Calculate taxes using Avalara AvaTax."
+          },
+          "logo": {
+            "light": {
+              "source": "https://raw.githubusercontent.com/saleor/apps/main/apps/avatax/public/logo.png"
+            },
+            "dark": {
+              "source": "https://raw.githubusercontent.com/saleor/apps/main/apps/avatax/public/logo.png"
+            }
+          },
+          "manifestUrl": "http://localhost:3010/api/manifest",
+          "repositoryUrl": "https://github.com/saleor/apps/tree/main/apps/avatax"
+        }
+      ]
+    },
+    {
+      "id": "cms",
+      "name": { "en": "CMS" },
+      "extensions": [
+        {
+          "id": "saleor.app.cms",
+          "type": "APP",
+          "kind": "OFFICIAL",
+          "name": { "en": "CMS" },
+          "description": {
+            "en": "Sync and manage content with an external CMS integration."
+          },
+          "logo": {
+            "light": {
+              "source": "https://raw.githubusercontent.com/saleor/apps/main/apps/cms/public/logo.png"
+            },
+            "dark": {
+              "source": "https://raw.githubusercontent.com/saleor/apps/main/apps/cms/public/logo.png"
+            }
+          },
+          "manifestUrl": "http://localhost:3009/api/manifest",
+          "repositoryUrl": "https://github.com/saleor/apps/tree/main/apps/cms"
+        }
+      ]
+    },
+    {
+      "id": "automation",
+      "name": { "en": "Automation" },
+      "extensions": [
+        {
+          "id": "saleor.app.search",
+          "type": "APP",
+          "kind": "OFFICIAL",
+          "name": { "en": "Search" },
+          "description": {
+            "en": "Index products in external search engines."
+          },
+          "logo": {
+            "light": {
+              "source": "https://raw.githubusercontent.com/saleor/apps/main/apps/search/public/logo.png"
+            },
+            "dark": {
+              "source": "https://raw.githubusercontent.com/saleor/apps/main/apps/search/public/logo.png"
+            }
+          },
+          "manifestUrl": "http://localhost:3006/api/manifest",
+          "repositoryUrl": "https://github.com/saleor/apps/tree/main/apps/search"
+        },
+        {
+          "id": "saleor.app.products.feed",
+          "type": "APP",
+          "kind": "OFFICIAL",
+          "name": { "en": "Products Feed" },
+          "description": {
+            "en": "Generate product feeds for ad platforms and channels."
+          },
+          "logo": {
+            "light": {
+              "source": "https://raw.githubusercontent.com/saleor/apps/main/apps/products-feed/public/logo.png"
+            },
+            "dark": {
+              "source": "https://raw.githubusercontent.com/saleor/apps/main/apps/products-feed/public/logo.png"
+            }
+          },
+          "manifestUrl": "http://localhost:3007/api/manifest",
+          "repositoryUrl": "https://github.com/saleor/apps/tree/main/apps/products-feed"
+        },
+        {
+          "id": "saleor.app.klaviyo",
+          "type": "APP",
+          "kind": "OFFICIAL",
+          "name": { "en": "Klaviyo" },
+          "description": {
+            "en": "Sync customers, events and catalogs with Klaviyo."
+          },
+          "logo": {
+            "light": {
+              "source": "https://raw.githubusercontent.com/saleor/apps/main/apps/klaviyo/public/logo.png"
+            },
+            "dark": {
+              "source": "https://raw.githubusercontent.com/saleor/apps/main/apps/klaviyo/public/logo.png"
+            }
+          },
+          "manifestUrl": "http://localhost:3008/api/manifest",
+          "repositoryUrl": "https://github.com/saleor/apps/tree/main/apps/klaviyo"
+        },
+        {
+          "id": "saleor.app.segment",
+          "type": "APP",
+          "kind": "OFFICIAL",
+          "name": { "en": "Segment" },
+          "description": {
+            "en": "Send Saleor events and customer data to Segment."
+          },
+          "logo": {
+            "light": {
+              "source": "https://raw.githubusercontent.com/saleor/apps/main/apps/segment/public/logo.png"
+            },
+            "dark": {
+              "source": "https://raw.githubusercontent.com/saleor/apps/main/apps/segment/public/logo.png"
+            }
+          },
+          "manifestUrl": "http://localhost:3005/api/manifest",
+          "repositoryUrl": "https://github.com/saleor/apps/tree/main/apps/segment"
+        },
+        {
+          "id": "saleor.app.smtp",
+          "type": "APP",
+          "kind": "OFFICIAL",
+          "name": { "en": "SMTP" },
+          "description": {
+            "en": "Send transactional emails through your SMTP provider."
+          },
+          "logo": {
+            "light": {
+              "source": "https://raw.githubusercontent.com/saleor/apps/main/apps/smtp/public/logo.png"
+            },
+            "dark": {
+              "source": "https://raw.githubusercontent.com/saleor/apps/main/apps/smtp/public/logo.png"
+            }
+          },
+          "manifestUrl": "https://a5d1-178-249-213-181.ngrok-free.app/api/manifest",
+          "repositoryUrl": "https://github.com/saleor/apps/tree/main/apps/smtp"
+        }
+      ]
+    }
+  ]
+}
